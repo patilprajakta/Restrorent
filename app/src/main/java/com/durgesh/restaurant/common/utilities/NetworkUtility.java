@@ -1,4 +1,4 @@
-package com.durgesh.restaurant.utility;
+package com.durgesh.restaurant.common.utilities;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -34,7 +34,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
     private Context mContext;
      private ArrayList<Place> placeArrayList;
     private OnItemClickListener onItemClickListener;
-    private com.durgesh.restaurant.utility.SnapXInterface service;
+    private com.durgesh.restaurant.network.ApiHelper service;
 
     public HomeListAdapter(Context context, ArrayList<Place> placeArrayList,
                            OnItemClickListener onItemClickListener) {
@@ -51,7 +51,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        service = ApiClient.getGoogleClient(mContext).create(com.durgesh.restaurant.utility.SnapXInterface.class);
+        service = ApiClient.getGoogleClient(mContext).create(com.durgesh.restaurant.network.ApiHelper.class);
 
         Place place=placeArrayList.get(position);
         holder.mTxtRestName.setText(place.getName());

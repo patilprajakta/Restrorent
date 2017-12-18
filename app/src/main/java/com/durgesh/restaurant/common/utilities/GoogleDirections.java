@@ -5,7 +5,7 @@ import android.util.Log;
 
 import com.durgesh.restaurant.models.googleDir.RootGoogleDir;
 import com.durgesh.restaurant.network.ApiClient;
-import com.durgesh.restaurant.network.SXAPInterface;
+import com.durgesh.restaurant.network.ApiHelper;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -16,7 +16,7 @@ import retrofit2.Response;
  */
 public class GoogleDirections {
 
-    public static SXAPInterface service;
+    public static ApiHelper service;
     public static Context mContext;
     public static RootGoogleDir mRootGoogleDir;
 
@@ -28,7 +28,7 @@ public class GoogleDirections {
     public RootGoogleDir getMapDir(String srcLat,String srcLng,String destLat, String destLng) {
 
         if (ApiClient.getClient(mContext) != null) {
-            service = ApiClient.getClient(mContext).create(SXAPInterface.class);
+            service = ApiClient.getClient(mContext).create(ApiHelper.class);
             //TODO latlngs are hardcoded for now
            /* final String srcLat = "18.497895";
             final String srcLng = "73.829229";

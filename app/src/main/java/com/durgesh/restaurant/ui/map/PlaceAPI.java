@@ -30,49 +30,8 @@ public class PlaceAPI {
         this.context = context;
     }
 
-    /* private ArrayList<String> placeArray = new ArrayList<>();
-     private SnapXInterface service;
-     private Context context;
-
-
-     public PlaceAPI(Context context) {
-         this.context = context;
-     }
-
-     public ArrayList<String> autocomplete (String input) {
-         service = ApiClient.getGoogleClient(context).create(SnapXInterface.class);
-
-         Call<PlacesAutoCompleteData> call = service.searchPredictions(input);
-
-         call.enqueue(new Callback<PlacesAutoCompleteData>() {
-             @Override
-             public void onResponse(Call<PlacesAutoCompleteData> call, Response<PlacesAutoCompleteData> response) {
-                 if (response.body() != null) {
-                     if (response.body().getPredictions() != null
-                             && response.body().getPredictions().size() != 0) {
-                         placeArray.clear();
-                         for (int i = 0; i < response.body().getPredictions().size(); i++) {
-                             placeArray.add(response.body().getPredictions().get(i).getDescription());
-                         }
- //                        callBack.searchPredictions(placeArray);
-                     }
- //                    else {
- //                        callBack.searchPredictions(null);
- //                    }
-                 }
-
-             }
-
-             @Override
-             public void onFailure(Call<PlacesAutoCompleteData> call, Throwable t) {
-
-             }
-         });
-
-         return placeArray;
-     }*/
     private static final String TAG = PlaceAPI.class.getSimpleName();
-    private com.durgesh.restaurant.utility.SnapXInterface service;
+    private com.durgesh.restaurant.network.ApiHelper service;
     private Context mContext;
 
     private static final String PLACES_API_BASE = "https://maps.googleapis.com/maps/api/place";
@@ -82,35 +41,6 @@ public class PlaceAPI {
     private static final String API_KEY = "AIzaSyBE60eBPlcvijgNGHK3X-Odd8zHJ2WksNk";
 
     public void autocomplete(String input) {
-
-   /* Using Retrofit
-
-        final ArrayList<String> resultList = new ArrayList<>();
-      service = ApiClient.getGoogleClient(context).create(SnapXInterface.class);
-
-        Call<PlacesAutoCompleteData> call = service.searchPredictions(input);
-
-        call.enqueue(new Callback<PlacesAutoCompleteData>() {
-            @Override
-            public void onResponse(Call<PlacesAutoCompleteData> call, Response<PlacesAutoCompleteData> response) {
-                if (response.body() != null) {
-                    if (response.body().getPredictions() != null
-                            && response.body().getPredictions().size() != 0) {
-                        for (int i = 0; i < response.body().getPredictions().size(); i++) {
-                            resultList.add(response.body().getPredictions().get(i).getDescription());
-                        }
-                    }
-                }
-
-            }
-
-            @Override
-            public void onFailure(Call<PlacesAutoCompleteData> call, Throwable t) {
-
-            }
-        });
-
-        return resultList;*/
 
         ArrayList<String> resultList = null;
 

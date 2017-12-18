@@ -3,6 +3,7 @@ package com.durgesh.restaurant.network;
 import android.content.Context;
 
 import com.durgesh.restaurant.R;
+
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
@@ -22,28 +23,28 @@ public class ApiClient {
 
     public static Retrofit getGoogleClient(Context context) {
 
-        if (com.durgesh.restaurant.utility.NetworkUtility.isNetworkAvailable()) {
+        if (com.durgesh.restaurant.common.utilities.NetworkUtility.isNetworkAvailable()) {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
 
             if (null == googleRetrofit) {
                 googleRetrofit = new Retrofit.Builder()
-                        .baseUrl(com.durgesh.restaurant.utility.WebConstants.GOOGLE_BASE_URL)
+                        .baseUrl(com.durgesh.restaurant.app.constant.RWebConstants.GOOGLE_BASE_URL)
                         .client(client)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
             }
             return googleRetrofit;
         } else {
-            com.durgesh.restaurant.utility.SnapXLog.showLongToast(context, context.getString(R.string.check_nw_connectivity));
+            com.durgesh.restaurant.app.constant.RToast.showLongToast(context, context.getString(R.string.check_nw_connectivity));
             return null;
         }
     }
 
     public static Retrofit getClient(Context context) {
 
-        if (com.durgesh.restaurant.utility.NetworkUtility.isNetworkAvailable()) {
+        if (com.durgesh.restaurant.common.utilities.NetworkUtility.isNetworkAvailable()) {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor)
@@ -54,14 +55,14 @@ public class ApiClient {
 
             if (null == retrofit) {
                 retrofit = new Retrofit.Builder()
-                        .baseUrl(com.durgesh.restaurant.utility.WebConstants.BASE_URL)
+                        .baseUrl(com.durgesh.restaurant.app.constant.RWebConstants.BASE_URL)
                         .client(client)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
             }
             return retrofit;
         } else {
-            com.durgesh.restaurant.utility.SnapXLog.showLongToast(context, context.getString(R.string.check_nw_connectivity));
+            com.durgesh.restaurant.app.constant.RToast.showLongToast(context, context.getString(R.string.check_nw_connectivity));
             return null;
         }
     }

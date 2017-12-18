@@ -18,7 +18,7 @@ import com.durgesh.restaurant.models.googlePlaces.Place;
 import com.durgesh.restaurant.models.googlePlaces.Results;
 import com.durgesh.restaurant.models.googlePlaces.RootGooglePlaces;
 import com.durgesh.restaurant.network.ApiClient;
-import com.durgesh.restaurant.network.SXAPInterface;
+import com.durgesh.restaurant.network.ApiHelper;
 
 import java.util.ArrayList;
 
@@ -61,7 +61,7 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        SXAPInterface service;
+        ApiHelper service;
         holder.bind(position, resultsArrayList.get(position), onCardItemClickListener);
         holder.mTxtHotelName.setText(rootGooglePlaces.getResults().get(position).getName());
         if (rootGooglePlaces.getResults().get(position).getRating() != null) {
@@ -76,7 +76,7 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
             }
         });
 
-        service = ApiClient.getClient(mContext).create(SXAPInterface.class);
+        service = ApiClient.getClient(mContext).create(ApiHelper.class);
         Place place = placeArrayList.get(position);
         final Call<ResponseBody> call1 = service.searchPhotos(place.getPhoto());
         call1.enqueue(new Callback<ResponseBody>() {
@@ -102,7 +102,7 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
 
 
         if (ApiClient.getClient(mContext) != null) {
-            service = ApiClient.getClient(mContext).create(SXAPInterface.class);
+            service = ApiClient.getClient(mContext).create(ApiHelper.class);
             //TODO latlngs are hardcoded for now
             String srcLat = "18.499502";
             String srcLng = "73.821873";

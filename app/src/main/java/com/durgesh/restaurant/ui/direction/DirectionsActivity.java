@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.durgesh.restaurant.R;
 import com.durgesh.restaurant.models.googleDir.RootGoogleDir;
 import com.durgesh.restaurant.network.ApiClient;
-import com.durgesh.restaurant.network.SXAPInterface;
+import com.durgesh.restaurant.network.ApiHelper;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -100,10 +100,10 @@ public class DirectionsActivity extends AppCompatActivity implements OnMapReadyC
     }
 
     private void getMapDir() {
-        SXAPInterface service;
+        ApiHelper service;
 
         if (ApiClient.getGoogleClient(this) != null) {
-            service = ApiClient.getGoogleClient(this).create(SXAPInterface.class);
+            service = ApiClient.getGoogleClient(this).create(ApiHelper.class);
             //TODO latlngs are hardcoded for now
             final String srcLat = "18.497895";
             final String srcLng = "73.829229";

@@ -62,7 +62,7 @@ public class HomeLocationActivity extends AppCompatActivity {
     private PlacesAutoCompleteAdapter mAdapter;
     private Location mLocation;
     private String mLocationName;
-    private com.durgesh.restaurant.utility.SnapXInterface service;
+    private com.durgesh.restaurant.network.ApiHelper service;
     private double lat;
     private double lng;
     public static boolean isLocationSelected;
@@ -83,7 +83,7 @@ public class HomeLocationActivity extends AppCompatActivity {
         final SharedPreferences.Editor editor = pref.edit();
         sTrendingSearchList = new ArrayList<>();
 
-        service = ApiClient.getGoogleClient(this).create(com.durgesh.restaurant.utility.SnapXInterface.class);
+        service = ApiClient.getGoogleClient(this).create(com.durgesh.restaurant.network.ApiHelper.class);
         PREDICTIONS.clear();
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
@@ -243,7 +243,7 @@ public class HomeLocationActivity extends AppCompatActivity {
 
     @OnClick(R.id.edt_detect_my_location)
     public void detectCurrentLocation() {
-        com.durgesh.restaurant.utility.SnapXLog.showToast(this, getString(R.string.location_changed_to) + " " + mLocationName);
+        com.durgesh.restaurant.app.constant.RToast.showToast(this, getString(R.string.location_changed_to) + " " + mLocationName);
         finish();
     }
 

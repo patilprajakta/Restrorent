@@ -94,7 +94,7 @@ public class HomeListFragment extends DaggerFragment implements HomeContract.Vie
     @BindView(R.id.txt_sort)
     protected TextView mTxtSort;
 
-    private com.durgesh.restaurant.utility.SnapXInterface service;
+    private com.durgesh.restaurant.network.ApiHelper service;
     private Place place;
 
     private Activity mActivity;
@@ -147,7 +147,7 @@ public class HomeListFragment extends DaggerFragment implements HomeContract.Vie
         mDialog.setMessage(getString(R.string.please_wait));
 
         if (ApiClient.getGoogleClient(mActivity) != null) {
-            service = ApiClient.getGoogleClient(mActivity).create(com.durgesh.restaurant.utility.SnapXInterface.class);
+            service = ApiClient.getGoogleClient(mActivity).create(com.durgesh.restaurant.network.ApiHelper.class);
         }
 
         if (ActivityCompat.checkSelfPermission(mActivity, android.Manifest.permission.ACCESS_FINE_LOCATION)

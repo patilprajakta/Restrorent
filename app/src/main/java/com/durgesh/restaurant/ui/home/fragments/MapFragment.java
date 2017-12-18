@@ -23,7 +23,7 @@ import com.durgesh.restaurant.models.googlePlaces.Place;
 import com.durgesh.restaurant.models.googlePlaces.Results;
 import com.durgesh.restaurant.models.googlePlaces.RootGooglePlaces;
 import com.durgesh.restaurant.network.ApiClient;
-import com.durgesh.restaurant.network.SXAPInterface;
+import com.durgesh.restaurant.network.ApiHelper;
 import com.durgesh.restaurant.ui.BlinkingMarker;
 import com.durgesh.restaurant.ui.details.DetailsActivity;
 import com.durgesh.restaurant.ui.home.HomeContract;
@@ -137,8 +137,8 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
     public void nearbyPlaces() {
 
         if (ApiClient.getGoogleClient(getActivity()) != null) {
-            SXAPInterface service;
-            service = ApiClient.getGoogleClient(getActivity()).create(SXAPInterface.class);
+            ApiHelper service;
+            service = ApiClient.getGoogleClient(getActivity()).create(ApiHelper.class);
             Call<RootGooglePlaces> call = service.getGooglePlaces(srcLat + "," + srcLng);
             call.enqueue(new Callback<RootGooglePlaces>() {
                 @Override
@@ -288,8 +288,7 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                 public void onFailure(Call<RootGooglePlaces> call, Throwable t) {
                     mProgressBar.setVisibility(View.GONE);
                     mFrameLayout.setAlpha((float) 1.0);
-//                    SXLog.showToast(getActivity(), "failure");
-//                    Toast.makeText(getActivity(),"Failure",Toast.LENGTH_SHORT).show();
+
                 }
             });
         }
@@ -313,11 +312,11 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
 
     @OnClick(R.id.imgCurLoc)
     public void imgCurLoc(View view) {
-        com.durgesh.restaurant.utilities.SXLog.showToast(getActivity(), "change location");
+        com.durgesh.restaurant.app.constant.RToast.showToast(getActivity(), "change location");
     }
 
     @OnClick(R.id.imgFilter)
     public void imgFilters(View view) {
-        com.durgesh.restaurant.utilities.SXLog.showToast(getActivity(), "filters");
+        com.durgesh.restaurant.app.constant.RToast.showToast(getActivity(), "filters");
     }
 }

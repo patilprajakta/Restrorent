@@ -40,17 +40,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.durgesh.restaurant.utility.WebConstants.BAD_GATEWAY;
-import static com.durgesh.restaurant.utility.WebConstants.NOT_FOUND;
+import static com.durgesh.restaurant.app.constant.RWebConstants.BAD_GATEWAY;
+import static com.durgesh.restaurant.app.constant.RWebConstants.NOT_FOUND;
 
 
 public class CameraActivity extends AppCompatActivity implements Camera.PictureCallback {
 
-    protected static final String EXTRA_IMAGE_PATH = "com.example.synerzip.snapx360.ui.EXTRA_IMAGE_PATH";
+    protected static final String EXTRA_IMAGE_PATH = "com.durgesh.restaurent.ui.EXTRA_IMAGE_PATH";
     private static final int REQUEST_CODE = 1;
     private static final int CAMERA = 3;
     private Camera mCamera;
-    private com.durgesh.restaurant.utility.SnapXInterface service;
+    private com.durgesh.restaurant.network.ApiHelper service;
     private static final String TAG = "CameraActivity";
 
     @BindView(R.id.camera_preview)
@@ -76,7 +76,7 @@ public class CameraActivity extends AppCompatActivity implements Camera.PictureC
 
 
         if (ApiClient.getClient(this) != null) {
-            service = ApiClient.getClient(this).create(com.durgesh.restaurant.utility.SnapXInterface.class);
+            service = ApiClient.getClient(this).create(com.durgesh.restaurant.network.ApiHelper.class);
         }
 
         setResult(RESULT_CANCELED);
@@ -192,7 +192,7 @@ public class CameraActivity extends AppCompatActivity implements Camera.PictureC
                     Log.v("Response code", "" + response.code());
                     pd.cancel();
                     if (response.code() == 200) {
-                        //SnapXLog.showToast(CameraActivity.this, "Image uploaded successfully");
+                        //RToast.showToast(CameraActivity.this, "Image uploaded successfully");
                         ImageCompareResponse imageCompareResponse = response.body();
                         if (imageCompareResponse != null) {
 
@@ -247,30 +247,30 @@ public class CameraActivity extends AppCompatActivity implements Camera.PictureC
 
                             } else {
                                 Log.d(TAG, getString(R.string.not_a_deal_image));
-                                com.durgesh.restaurant.utility.SnapXLog.showToast(CameraActivity.this, getString(R.string.not_a_food_or_listed_item));
+                                com.durgesh.restaurant.app.constant.RToast.showToast(CameraActivity.this, getString(R.string.not_a_food_or_listed_item));
                                 finish();
                             }
                         } else {
                             Log.d(TAG, getString(R.string.not_a_food_image));
-                            com.durgesh.restaurant.utility.SnapXLog.showToast(CameraActivity.this, getString(R.string.not_a_food_or_listed_item));
+                            com.durgesh.restaurant.app.constant.RToast.showToast(CameraActivity.this, getString(R.string.not_a_food_or_listed_item));
                             finish();
                         }
                     } else if (response.code() == BAD_GATEWAY) {
-                        com.durgesh.restaurant.utility.SnapXLog.showToast(CameraActivity.this, getString(R.string.please_try_after_sometime));
+                        com.durgesh.restaurant.app.constant.RToast.showToast(CameraActivity.this, getString(R.string.please_try_after_sometime));
                     } else if (response.code() == NOT_FOUND) {
-                        com.durgesh.restaurant.utility.SnapXLog.showToast(CameraActivity.this, getString(R.string.please_try_after_sometime));
+                        com.durgesh.restaurant.app.constant.RToast.showToast(CameraActivity.this, getString(R.string.please_try_after_sometime));
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ImageCompareResponse> call, Throwable t) {
                     pd.dismiss();
-                    com.durgesh.restaurant.utility.SnapXLog.showToast(CameraActivity.this, "Image uploading failed");
+                    com.durgesh.restaurant.app.constant.RToast.showToast(CameraActivity.this, "Image uploading failed");
                     finish();
                 }
             });
         } else {
-            com.durgesh.restaurant.utility.SnapXLog.showLongToast(this, getString(R.string.check_nw_connectivity));
+            com.durgesh.restaurant.app.constant.RToast.showLongToast(this, getString(R.string.check_nw_connectivity));
         }
 
     }
