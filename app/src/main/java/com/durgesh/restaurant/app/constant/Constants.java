@@ -4,7 +4,7 @@ package com.durgesh.restaurant.app.constant;
  * Created by durgeshtrivedi on 14/12/17.
  */
 
-public class Constants {
+public interface Constants {
 
     public static final String BASE_URL = "https://api.nal.usda.gov";
 

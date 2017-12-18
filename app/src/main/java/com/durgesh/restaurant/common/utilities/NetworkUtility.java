@@ -4,8 +4,6 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.durgesh.restaurant.MyApplication;
-
 
 /**
  * Created by Snehal Tembare on 1/9/17.
@@ -18,10 +16,9 @@ public class NetworkUtility {
      *
      * @return boolean variable indicating the status
      */
-    public static boolean isNetworkAvailable() {
+    public static  boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm =
-                (ConnectivityManager) MyApplication.getInstance().
-                        getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+                (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
 
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
 

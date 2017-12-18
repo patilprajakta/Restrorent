@@ -24,6 +24,11 @@ import dagger.Provides;
         return new Router();
     }
 
+    @Provides
+    static Context provideAppCpntext(Context context) {
+        return context;
+    }
+
     @Binds
     abstract Context provideContext(Application application);
 }

@@ -23,7 +23,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.durgesh.restaurant.HomeListAdapter;
+import com.durgesh.restaurant.ui.home.HomeListAdapter;
 import com.durgesh.restaurant.R;
 import com.durgesh.restaurant.models.Hotel;
 import com.durgesh.restaurant.models.OpeningHours;
@@ -57,7 +57,6 @@ import retrofit2.Response;
 
 /**
  * Created by Snehal Tembare on 5/9/17.
-
  */
 public class HomeListFragment extends DaggerFragment implements HomeContract.View {
 
@@ -188,9 +187,7 @@ public class HomeListFragment extends DaggerFragment implements HomeContract.Vie
                             }
                             lat = mLastKnownLocation.getLatitude();
                             lng = mLastKnownLocation.getLongitude();
-                            if (lat != 0 && lng != 0) {
-                                callPlaceAPI(lat, lng);
-                            }
+                           callPlaceAPI(lat,lng);
 
                         } catch (IOException e) {
                             e.printStackTrace();

@@ -23,7 +23,7 @@ public class ApiClient {
 
     public static Retrofit getGoogleClient(Context context) {
 
-        if (com.durgesh.restaurant.common.utilities.NetworkUtility.isNetworkAvailable()) {
+        if (com.durgesh.restaurant.common.utilities.NetworkUtility.isNetworkAvailable(context)) {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
@@ -44,7 +44,7 @@ public class ApiClient {
 
     public static Retrofit getClient(Context context) {
 
-        if (com.durgesh.restaurant.common.utilities.NetworkUtility.isNetworkAvailable()) {
+        if (com.durgesh.restaurant.common.utilities.NetworkUtility.isNetworkAvailable(context)) {
             HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
             interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor)

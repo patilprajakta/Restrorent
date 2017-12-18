@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
  * Created by Snehal Tembare on 1/9/17.
 
  */
+
 public class DetailsActivity extends AppCompatActivity {
     @BindView(R.id.image)
     protected ImageView imageView;

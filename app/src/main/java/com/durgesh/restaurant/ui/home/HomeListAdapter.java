@@ -1,4 +1,4 @@
-package com.durgesh.restaurant;
+package com.durgesh.restaurant.ui.home;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.durgesh.restaurant.R;
 import com.durgesh.restaurant.models.googlePlaces.Place;
 import com.durgesh.restaurant.network.ApiClient;
 import com.durgesh.restaurant.ui.homeLocation.OnItemClickListener;
