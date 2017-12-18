@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="@dimen/dimen_48dp"
+            android:layout_height="@dimen/dimen_48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_121dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_placeholder" />
+
+        <TextView
+            android:id="@+id/txtAppTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_marginTop="15.5dp"
+            android:width="@dimen/dimen_179dp"
+            android:height="@dimen/dimen_46dp"
+            android:fontFamily="San Francisco Display"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.18"
+            android:text="@string/app_name"
+            android:textColor="@color/colorLoginBtn"
+            android:textSize="@dimen/dimen_39sp" />
+
+
+<!--        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAppTitle"
+            android:gravity="center_horizontal"
+            android:visibility="gone" />-->
+
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btnFbLogin"
+            android:layout_width="@dimen/dimen_241dp"
+            android:layout_height="@dimen/dimen_44dp"
+            android:layout_below="@+id/txtAppTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_146dp"
+            android:background="@drawable/bg_login_fb"
+            android:drawableLeft="@drawable/ic_fb_logo"
+            android:padding="@dimen/dimen_10dp"
+            android:text="@string/login_with_fb"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimen_16sp" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone" />
+</FrameLayout>

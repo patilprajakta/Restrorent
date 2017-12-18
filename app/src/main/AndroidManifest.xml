@@ -1,0 +1,88 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools= "http://schemas.android.com/tools"
+     package="com.durgesh.restaurant">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="26" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".ui.RestaurentApplication">
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/facebook_app_id"
+        tools:replace="android:value"/>
+
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/api_key" />
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+    <!-- <meta-data
+         android:name="com.google.android.geo.API_KEY"
+         android:value="@string/google_maps_key" />-->
+        <activity android:name="com.durgesh.restaurant.ui.home.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+    <activity android:name="com.durgesh.restaurant.ui.main.MainActivity" />
+
+    <activity android:name="com.durgesh.restaurant.ui.facebook.FacebookLoginActivity" />
+
+
+    <activity android:name="com.durgesh.restaurant.ui.direction.DirectionsActivity"/>
+    <activity
+        android:name="com.durgesh.restaurant.ui.map.MapsActivity"
+        android:label="@string/title_activity_maps" />
+    <activity android:name="com.durgesh.restaurant.ui.details.DetailsActivity" />
+    <activity android:name="com.durgesh.restaurant.ui.splash.SplashActivity" />
+    <activity android:name="com.durgesh.restaurant.ui.camera.CameraActivity" />
+    <activity android:name="com.durgesh.restaurant.ui.currentLocation.CurrentLocationActivity" />
+    <activity android:name="com.durgesh.restaurant.ui.homeLocation.HomeLocationActivity" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
+

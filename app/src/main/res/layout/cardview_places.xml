@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|bottom"
+    android:layout_margin="@dimen/dimen_27dp"
+    android:id="@+id/cardView"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/dimen_5dp">
+
+    <View
+        android:id="@+id/viewNearbyPlaces"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_3dp"
+        android:background="@color/colorGoogleDir"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_108dp"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <ImageView
+            android:id="@+id/imgCardHotel"
+            android:layout_width="@dimen/dimen_113dp"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/imgHotel">
+
+            <TextView
+                android:id="@+id/txtHotelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:fontFamily="Helvetica Neue"
+                android:text="Azalea"
+                android:textColor="@color/colorHotelName"
+                android:textSize="@dimen/dimen_16sp" />
+
+            <LinearLayout
+                android:id="@+id/linaer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtHotelName"
+                android:layout_marginTop="@dimen/dimen_11dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:src="@drawable/ic_star" />
+
+                <TextView
+                    android:id="@+id/txtRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2dp"
+                    android:fontFamily="San Francisco Display"
+                    android:text="4"
+                    android:textColor="@color/colorHotelDetails"
+                    android:textSize="@dimen/dimen_10sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_6dp"
+                    android:layout_marginRight="@dimen/dimen_6dp"
+                    android:src="@drawable/ic_dot" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_hotel_marker" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2dp"
+                    android:fontFamily="San Francisco Display"
+                    android:text="Local"
+                    android:textColor="@color/colorHotelDetails"
+                    android:textSize="@dimen/dimen_10sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_6dp"
+                    android:layout_marginRight="@dimen/dimen_6dp"
+                    android:src="@drawable/ic_dot" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_walk" />
+
+                <TextView
+                    android:id="@+id/txtHotelDist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_4dp"
+                    android:fontFamily="San Francisco Display"
+                    android:textColor="@color/colorHotelDetails"
+                    android:textSize="@dimen/dimen_10sp" />
+
+                <TextView
+                    android:id="@+id/txtHotelDur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_2dp"
+                    android:fontFamily="San Francisco Display"
+                    android:textColor="@color/colorHotelDetails"
+                    android:textSize="@dimen/dimen_10sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dimen_6dp"
+                    android:layout_marginRight="@dimen/dimen_6dp"
+                    android:src="@drawable/ic_dot" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_dollar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgWifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linaer_layout"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:src="@drawable/ic_wifi" />
+
+                <ImageView
+                    android:id="@+id/imgReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_9dp"
+                    android:src="@drawable/ic_card_perc" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
