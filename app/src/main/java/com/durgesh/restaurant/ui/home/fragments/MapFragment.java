@@ -3,6 +3,7 @@ package com.durgesh.restaurant.ui.home.fragments;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.location.Address;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -56,14 +57,14 @@ import retrofit2.Response;
  * Created by Snehal Tembare on 5/9/17.
 
  */
-public class MapFragment extends DaggerFragment implements HomeContract.View, OnMapReadyCallback {
+public class MapFragment extends DaggerFragment implements HomeContract.MapView, OnMapReadyCallback {
 
 
     private static final double DIST_IN_MILE = 1609;
     private static final float STROKE_WIDTH = 2;
 
     @Inject
-    HomeContract.Presenter mPresenter;
+    HomeContract.MapPresenter mapPresenter;
 
     @Inject
     public MapFragment(){
@@ -319,4 +320,5 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
     public void imgFilters(View view) {
         com.durgesh.restaurant.app.constant.RToast.showToast(getActivity(), "filters");
     }
+
 }

@@ -4,6 +4,7 @@ package com.durgesh.restaurant.ui.home;
  * Created by durgeshtrivedi on 15/12/17.
  */
 
+import android.location.Location;
 import android.support.annotation.Nullable;
 
 import com.durgesh.restaurant.dagger.ActivityScoped;
@@ -12,7 +13,7 @@ import com.durgesh.restaurant.ui.home.fragments.HomeListFragment;
 import javax.inject.Inject;
 
 /**
- * Listens to user actions from the UI ({@link HomeListFragment , ProfileFragment , etc}), retrieves the data and updates the
+ * Listens to user actions from the UI ({@link HomeListFragment }), retrieves the data and updates the
  * UI as required.
  * <p/>
  * By marking the constructor with {@code @Inject}, Dagger injects the dependencies required to
@@ -26,24 +27,65 @@ import javax.inject.Inject;
 @ActivityScoped
 final class HomePresenter implements HomeContract.Presenter {
 
-    private final HomeInteractor mHomeInteractor;
+    private final HomeInteracter mHomeInteractor;
+
+    private double latitude;
+
+    private double longitude;
+
+    private Location location;
 
     @Nullable
-    private HomeContract.View mHomeView;
+    private HomeContract.HomeView homeView;
 
     @Inject
-    HomePresenter(HomeInteractor homeInteractor) {
-        mHomeInteractor = homeInteractor;
+    public HomePresenter(HomeInteracter homeInteractor) {
+        this.mHomeInteractor = homeInteractor;
     }
 
     @Override
-    public void takeView(HomeContract.View view) {
-        this.mHomeView = view;
-        //loadTasks(false);
+    public void takeView(HomeContract.HomeView view) {
+        this.homeView = view;
     }
 
     @Override
     public void dropView() {
-        mHomeView = null;
+        homeView = null;
     }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public void getUserLocation() {
+        mHomeInteractor.setHomeView(homeView);
+        mHomeInteractor.getUserLocation();
+    }
+
+    public void getPlaces(double lat, double lng) {
+        mHomeInteractor.setHomeView(homeView);
+        mHomeInteractor.getPlaces(lat, lng);
+    }
+
+
 }

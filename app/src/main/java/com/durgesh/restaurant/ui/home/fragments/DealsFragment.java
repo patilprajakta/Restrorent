@@ -17,7 +17,7 @@ import dagger.android.DaggerFragment;
  * Created by Snehal Tembare on 5/9/17.
 
  */
-public class DealsFragment extends DaggerFragment implements HomeContract.View {
+public class DealsFragment extends DaggerFragment {
 
 
     @Inject
@@ -27,7 +27,6 @@ public class DealsFragment extends DaggerFragment implements HomeContract.View {
     public DealsFragment(){
 
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

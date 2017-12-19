@@ -64,7 +64,7 @@ public class HomeActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+       // mHomePresenter.takeView(this);
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -98,5 +98,11 @@ public class HomeActivity extends BaseActivity {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void onDestroy() {
+        mHomePresenter.dropView();
+        super.onDestroy();
     }
 }

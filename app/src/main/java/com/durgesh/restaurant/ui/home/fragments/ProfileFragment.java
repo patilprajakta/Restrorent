@@ -17,7 +17,7 @@ import dagger.android.DaggerFragment;
  * Created by Snehal Tembare on 5/9/17.
 
  */
-public class ProfileFragment extends DaggerFragment implements HomeContract.View {
+public class ProfileFragment extends DaggerFragment {
 
     @Inject
     HomeContract.Presenter mPresenter;
