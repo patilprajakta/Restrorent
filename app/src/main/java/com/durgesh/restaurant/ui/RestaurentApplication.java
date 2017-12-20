@@ -12,7 +12,6 @@ import dagger.android.DaggerApplication;
 
 public class RestaurentApplication extends DaggerApplication {
 
-
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
         AppComponent appComponent = DaggerAppComponent.builder().application(this).build();
         appComponent.inject(this);

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher_round.png",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    }
+]

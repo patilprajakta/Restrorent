@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_search_url_text.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_seek_thumb.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/color/design_error.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_edittext.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_spinner.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_switch_track.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/design_tint_password_toggle.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/color/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_switch_thumb.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_btn_checkable.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_tint.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/4e6a73f99f4d9b25811c9af04e30b454/res/color/common_google_signin_btn_tint.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_btn_colored_text_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/4e6a73f99f4d9b25811c9af04e30b454/res/color/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/common_google_signin_btn_text_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/play-services-base-11.6.2.aar/4e6a73f99f4d9b25811c9af04e30b454/res/color/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/switch_thumb_material_dark.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/calendar_text_selector.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/android-times-square-1.6.5.aar/f83075245695baaf98383d16d7ac94b1/res/color/calendar_text_selector.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color/abc_tint_default.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color/abc_tint_default.xml"
+    }
+]

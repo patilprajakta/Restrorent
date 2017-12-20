@@ -1,0 +1,4 @@
+#Tue Dec 19 14:26:58 IST 2017
+base.0=/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/transforms/dexMerger/debug/8
+path.0=classes.dex
+renamed.0=classes.dex

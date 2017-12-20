@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

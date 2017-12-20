@@ -1,0 +1,342 @@
+[
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_item_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_navigation_menu_item.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_navigation_menu_item.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/location_input_dialog.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/location_input_dialog.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_directions.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_directions.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/select_dialog_item_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/select_dialog_item_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_select_dialog_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_screen_simple.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/month.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/android-times-square-1.6.5.aar/f83075245695baaf98383d16d7ac94b1/res/layout/month.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_large.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/messenger_button_send_white_large.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_screen_content_include.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_screen_content_include.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/item_treanding_search.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/item_treanding_search.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/week.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/android-times-square-1.6.5.aar/f83075245695baaf98383d16d7ac94b1/res/layout/week.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_text_input_password_icon.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_navigation_item.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_navigation_item_subheader.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_title_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_expanded_menu_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_small.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/messenger_button_send_blue_small.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_maps.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_maps.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_camera.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_camera.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_screen_simple_overlay_action_mode.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/com_facebook_login_fragment.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/com_facebook_login_fragment.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_small.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/messenger_button_send_white_small.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/fragment_profile.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/fragment_map.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/fragment_map.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/item_home.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/item_home.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/place_autocomplete_progress.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/play-services-places-11.6.2.aar/cefd69d2b4cbfa2959c9d189efb51399/res/layout/place_autocomplete_progress.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/support_simple_spinner_dropdown_item.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_menu_item_action_area.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_menu_item_action_area.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_details.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_details.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_prediction.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/play-services-places-11.6.2.aar/cefd69d2b4cbfa2959c9d189efb51399/res/layout/place_autocomplete_item_prediction.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/com_facebook_activity_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/com_facebook_activity_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_layout_tab_text.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/autocomplete.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/autocomplete.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_round.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/messenger_button_send_blue_round.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_home_location.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_home_location.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_map_current_location.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_map_current_location.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/place_autocomplete_item_powered_by_google.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/play-services-places-11.6.2.aar/cefd69d2b4cbfa2959c9d189efb51399/res/layout/place_autocomplete_item_powered_by_google.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/com_facebook_tooltip_bubble.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/com_facebook_tooltip_bubble.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/fragment_deals.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/fragment_deals.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_navigation_menu.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_navigation_menu.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_home.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_search_view.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_search_view.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_bottom_sheet_dialog.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_bottom_sheet_dialog.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view_list_item.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/fragment_home_list.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/fragment_home_list.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/item_recent_searches.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/item_recent_searches.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_splash.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/notification_template_lines_media.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/notification_template_media_custom.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/notification_template_media_custom.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/cardview_places.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/cardview_places.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/fragment_coupons.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/fragment_coupons.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/messenger_button_send_blue_large.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/messenger_button_send_blue_large.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/messenger_button_send_white_round.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/facebook-android-sdk-4.0.1.aar/4dd48f112ec8d9663917fd5aa122e4f7/res/layout/messenger_button_send_white_round.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_bottom_navigation_item.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_bottom_navigation_item.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/activity_log_in.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/layout/activity_log_in.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/res/layout/abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/layout/design_layout_tab_icon.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/layout/design_layout_tab_icon.xml"
+    }
+]

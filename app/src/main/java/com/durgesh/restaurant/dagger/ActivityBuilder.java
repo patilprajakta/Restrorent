@@ -23,8 +23,4 @@ public abstract class ActivityBuilder {
     @ActivityScoped
     @ContributesAndroidInjector(modules = HomeModule.class)
     abstract HomeActivity bindHomeActivity();
-//
-   // @ActivityScoped
-//    @ContributesAndroidInjector(modules = {CarBrandDetailModule.class})
-//    abstract CarBrandDetailActivity bindCarBrandDetailActivity();
 }

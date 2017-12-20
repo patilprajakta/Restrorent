@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.synerzip.snapandroid.ui.HomeListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/common_dimens_20"
+        android:paddingBottom="@dimen/common_dimens_20"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txt_current_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawableRight="@drawable/ic_filter"
+            android:gravity="center_horizontal"
+            android:textColor="#FF615F5F"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/txt_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawableRight="@drawable/ic_filter"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_dimens_2"
+        android:background="@color/view_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_dimens_10"
+        android:layout_marginLeft="@dimen/common_dimens_10"
+        android:layout_marginRight="@dimen/common_dimens_10"
+        android:layout_marginTop="@dimen/common_dimens_10"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txt_restaurants_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="start"
+            android:paddingLeft="@dimen/common_dimens_10"
+            android:textColor="#FF565656"
+            android:textSize="@dimen/text_size_12sp" />
+
+        <TextView
+            android:id="@+id/txt_sort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawableRight="@drawable/ic_filter"
+            android:padding="@dimen/common_dimens_5"
+            android:text="Sort by"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size_12sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

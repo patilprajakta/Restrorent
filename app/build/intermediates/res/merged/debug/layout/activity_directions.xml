@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:mContext="com.example.synerzip.snapandroid.ui.SplashActivity">
+
+    <!--TODO texts are hardcoded which will be removed after fetching api values-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_500dp"
+                    tools:mContext="com.example.synerzip.snapandroid.ui.DirectionsActivity" />
+
+                <RelativeLayout
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/map">
+
+                    <TextView
+                        android:id="@+id/txtHotelName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_37dp"
+                        android:fontFamily="Helvetica Neue"
+                        android:text="Azalea"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimen_24sp" />
+
+                    <TextView
+                        android:id="@+id/txtAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtHotelName"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="Helvetica Neue"
+                        android:text="224 W 51st St, NewYork"
+                        android:textColor="@color/colorAddress"
+                        android:textSize="@dimen/dimen_12sp" />
+
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="@dimen/dimen_192dp"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_below="@id/txtAddr"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dimen_6dp"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:background="@color/colorDivider"
+                        android:minWidth="@dimen/dimen_2dp" />
+
+                    <TextView
+                        android:id="@+id/txtTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view1"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily=".SF NS Text"
+                        android:text="Open Today - 11AM to 11PM"
+                        android:textColor="@color/colorHotelTime"
+                        android:textSize="@dimen/dimen_15sp" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="@dimen/dimen_192dp"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_below="@id/txtTime"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/dimen_6dp"
+                        android:layout_marginTop="@dimen/dimen_6dp"
+                        android:background="@color/colorDivider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtTime"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_dollar" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_6dp"
+                            android:layout_marginRight="@dimen/dimen_6dp"
+                            android:src="@drawable/ic_dot" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="San Francisco Display"
+                            android:text="Italian"
+                            android:textColor="@color/colorHotelDetails"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_6dp"
+                            android:layout_marginRight="@dimen/dimen_6dp"
+                            android:src="@drawable/ic_dot" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_hotel_marker" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_2dp"
+                            android:fontFamily="San Francisco Display"
+                            android:text="Local"
+                            android:textColor="@color/colorHotelDetails"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_6dp"
+                            android:layout_marginRight="@dimen/dimen_6dp"
+                            android:src="@drawable/ic_dot" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="San Francisco Display"
+                            android:text="80 Reviews"
+                            android:textColor="@color/colorHotelDetails"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dimen_6dp"
+                            android:layout_marginRight="@dimen/dimen_6dp"
+                            android:src="@drawable/ic_dot" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_walk" />
+
+                        <TextView
+                            android:id="@+id/txtDuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_4dp"
+                            android:fontFamily="San Francisco Display"
+                            android:textColor="@color/colorHotelDetails"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                        <TextView
+                            android:id="@+id/txtDistInMiles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_2dp"
+                            android:fontFamily="San Francisco Display"
+                            android:textColor="@color/colorHotelDetails"
+                            android:textSize="@dimen/dimen_12sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_56dp"
+                android:background="@color/actionbar_opacity">
+
+                <ImageView
+                    android:id="@+id/imgBackArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dimen_20dp"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <TextView
+                    android:id="@+id/txtNavTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="San Francisco Display"
+                    android:text="@string/toolbar_nav"
+                    android:textColor="@color/colorToolbarTxt"
+                    android:textSize="@dimen/dimen_16sp" />
+
+                <ImageView
+                    android:id="@+id/imgShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimen_20dp"
+                    android:actionProviderClass="android.widget.ShareActionProvider"
+                    android:src="@drawable/ic_share" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="@dimen/dimen_55dp"
+                android:layout_height="@dimen/dimen_55dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="@dimen/dimen_190dp"
+                android:src="@drawable/ic_rating" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="@dimen/dimen_180dp"
+                android:fontFamily="Helvetica Neue"
+                android:text="4.5"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dimen_14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="@dimen/dimen_200dp"
+                android:src="@drawable/ic_rating_star" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+</FrameLayout>
+

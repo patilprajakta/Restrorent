@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.durgesh.restaurant.models.googlePlaces.Place;
 import com.durgesh.restaurant.network.ApiClient;
 import com.durgesh.restaurant.ui.homeLocation.OnItemClickListener;
+import com.durgesh.restaurant.utility.SnapXInterface;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -34,8 +35,7 @@ public class HomeListAdapter extends RecyclerView.Adapter<HomeListAdapter.ViewHo
     private Context mContext;
      private ArrayList<Place> placeArrayList;
     private OnItemClickListener onItemClickListener;
-    private com.durgesh.restaurant.utility.SnapXInterface service;
-
+private SnapXInterface service;
     public HomeListAdapter(Context context, ArrayList<Place> placeArrayList,
                            OnItemClickListener onItemClickListener) {
         this.mContext = context;

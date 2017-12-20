@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/menu/bottom_navigation_items.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/menu/bottom_navigation_items.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/debug/menu/menu_sort.xml",
+        "source": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/res/menu/menu_sort.xml"
+    }
+]

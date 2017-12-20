@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/home/synerzip/Desktop/AndroidProj/Restrorent/app/build/intermediates/res/merged/androidTest/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    }
+]
