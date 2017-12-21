@@ -18,7 +18,7 @@ import com.durgesh.restaurant.models.googlePlaces.Place;
 import com.durgesh.restaurant.models.googlePlaces.Results;
 import com.durgesh.restaurant.models.googlePlaces.RootGooglePlaces;
 import com.durgesh.restaurant.network.ApiClient;
-import com.durgesh.restaurant.network.SXAPInterface;
+import com.durgesh.restaurant.network.ApiHelper;
 
 import java.util.ArrayList;
 
@@ -36,7 +36,6 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
     public RootGooglePlaces rootGooglePlaces;
     public ArrayList<Results> resultsArrayList;
     private Context mContext;
-    private int selectedCardPos;
     private ArrayList<Place> placeArrayList;
 
     private NearbyPlacesAdapter.OnCardItemClickListener onCardItemClickListener;
@@ -49,7 +48,7 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
         this.resultsArrayList = resultsArrayList;
         this.placeArrayList = placeArrayList;
         this.onCardItemClickListener = onCardItemClickListener;
-        this.selectedCardPos = selectedCardPos;
+        int selectedCardPos1 = selectedCardPos;
     }
 
     @Override
@@ -61,7 +60,7 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
-        SXAPInterface service;
+        ApiHelper service;
         holder.bind(position, resultsArrayList.get(position), onCardItemClickListener);
         holder.mTxtHotelName.setText(rootGooglePlaces.getResults().get(position).getName());
         if (rootGooglePlaces.getResults().get(position).getRating() != null) {
@@ -76,7 +75,7 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
             }
         });
 
-        service = ApiClient.getClient(mContext).create(SXAPInterface.class);
+        service = ApiClient.getClient(mContext).create(ApiHelper.class);
         Place place = placeArrayList.get(position);
         final Call<ResponseBody> call1 = service.searchPhotos(place.getPhoto());
         call1.enqueue(new Callback<ResponseBody>() {
@@ -100,10 +99,8 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
             }
         });
 
-
         if (ApiClient.getClient(mContext) != null) {
-            service = ApiClient.getClient(mContext).create(SXAPInterface.class);
-            //TODO latlngs are hardcoded for now
+            service = ApiClient.getClient(mContext).create(ApiHelper.class);
             String srcLat = "18.499502";
             String srcLng = "73.821873";
             String lat = rootGooglePlaces.getResults().get(position).getGeometry().getLocation().getLat();
@@ -161,12 +158,12 @@ public class NearbyPlacesAdapter extends RecyclerView.Adapter<NearbyPlacesAdapte
 
         public MyViewHolder(View view) {
             super(view);
-            mTxtHotelName = (TextView) view.findViewById(R.id.txtHotelName);
-            mTxtDist = (TextView) view.findViewById(R.id.txtHotelDist);
-            mTxtDuration = (TextView) view.findViewById(R.id.txtHotelDur);
-            mTxtRating = (TextView) view.findViewById(R.id.txtRating);
-            mCardView = (CardView) view.findViewById(R.id.cardView);
-            mImgHotel = (ImageView) view.findViewById(R.id.imgCardHotel);
+            mTxtHotelName =view.findViewById(R.id.txtHotelName);
+            mTxtDist =view.findViewById(R.id.txtHotelDist);
+            mTxtDuration =view.findViewById(R.id.txtHotelDur);
+            mTxtRating = view.findViewById(R.id.txtRating);
+            mCardView = view.findViewById(R.id.cardView);
+            mImgHotel =view.findViewById(R.id.imgCardHotel);
         }
 
         public void bind(final int position,

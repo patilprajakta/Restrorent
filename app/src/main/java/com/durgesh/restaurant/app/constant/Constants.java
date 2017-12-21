@@ -6,7 +6,6 @@ package com.durgesh.restaurant.app.constant;
 
 public class Constants {
 
-    public static final String BASE_URL = "https://api.nal.usda.gov";
-
-    public static final String API_KEY = "YOUR_API_KEY";
+    public static final String GOOGLE_API_KEY = "AIzaSyBE60eBPlcvijgNGHK3X-Odd8zHJ2WksNk";
+    public static final String BASE_URL = "";
 }

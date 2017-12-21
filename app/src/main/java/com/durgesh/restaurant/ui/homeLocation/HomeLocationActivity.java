@@ -21,8 +21,8 @@ import android.widget.EditText;
 
 import com.durgesh.restaurant.R;
 import com.durgesh.restaurant.models.PlaceDetails;
-import com.durgesh.restaurant.models.Prediction;
 import com.durgesh.restaurant.network.ApiClient;
+import com.durgesh.restaurant.network.ApiHelper;
 import com.durgesh.restaurant.ui.PlacesAutoCompleteAdapter;
 import com.durgesh.restaurant.ui.RecentSearchAdapter;
 
@@ -48,8 +48,8 @@ import static com.durgesh.restaurant.ui.map.PlaceAPI.PREDICTIONS;
  */
 public class HomeLocationActivity extends AppCompatActivity {
 
-    private static final String TAG = "HomeLocationActivity";
     private static ArrayList<String> sTrendingSearchList;
+
     @BindView(R.id.edt_detect_my_location)
     protected EditText mCurrentLocation;
 
@@ -59,10 +59,8 @@ public class HomeLocationActivity extends AppCompatActivity {
     @BindView(R.id.list_recent_searches)
     protected RecyclerView mRecyclerview;
 
-    private PlacesAutoCompleteAdapter mAdapter;
-    private Location mLocation;
     private String mLocationName;
-    private com.durgesh.restaurant.utility.SnapXInterface service;
+    private ApiHelper service;
     private double lat;
     private double lng;
     public static boolean isLocationSelected;
@@ -74,7 +72,6 @@ public class HomeLocationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_location);
         ButterKnife.bind(this);
-
         init();
     }
 
@@ -83,11 +80,11 @@ public class HomeLocationActivity extends AppCompatActivity {
         final SharedPreferences.Editor editor = pref.edit();
         sTrendingSearchList = new ArrayList<>();
 
-        service = ApiClient.getGoogleClient(this).create(com.durgesh.restaurant.utility.SnapXInterface.class);
+        service = ApiClient.getGoogleClient(this).create(com.durgesh.restaurant.network.ApiHelper.class);
         PREDICTIONS.clear();
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
-            mLocation = bundle.getParcelable("location");
+            Location mLocation = bundle.getParcelable("location");
             if (mLocation != null) {
                 Geocoder geocoder = new Geocoder(this);
 
@@ -100,15 +97,11 @@ public class HomeLocationActivity extends AppCompatActivity {
                 }
                 if (addresses != null) {
                     if (addresses.size() != 0) {
-                        Log.v("Full address", "" + addresses);
-                        Log.v("Locality", "" + addresses.get(0).getSubLocality());
 
                         if (addresses.get(0).getSubLocality() != null) {
-                            Log.v("Location", "" + addresses.get(0).getSubLocality());
                             mLocationName = addresses.get(0).getSubLocality();
                         } else {
                             if (addresses.get(0).getThoroughfare() != null) {
-                                Log.v("Location", "" + addresses.get(0).getThoroughfare());
                                 mLocationName = addresses.get(0).getThoroughfare();
                             }
                         }
@@ -116,34 +109,24 @@ public class HomeLocationActivity extends AppCompatActivity {
                 }
             }
         }
-        mAdapter = new PlacesAutoCompleteAdapter(this, R.layout.item_recent_searches);
+
+        PlacesAutoCompleteAdapter mAdapter = new PlacesAutoCompleteAdapter(this, R.layout.item_recent_searches);
         mAutoCompleteTv.setAdapter(mAdapter);
         mAutoCompleteTv.setThreshold(1);
 
         mAutoCompleteTv.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-              /*  if (s.length() == 0) {
-                    PREDICTIONS.clear();
-                }*/
+
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-             /*   if (s.length() == 0) {
-                    PREDICTIONS.clear();
-                }
-                if (s.length() > 0) {
-                    mAutoCompleteTv.setCompoundDrawablesWithIntrinsicBounds(ic_menu_search, 0,
-                            R.drawable.ic_input_delete, 0);
-                }*/
+
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-               /* if (s.length() == 0) {
-                    PREDICTIONS.clear();
-                }*/
                 if (s.length() > 0) {
                     mAutoCompleteTv.setCompoundDrawablesWithIntrinsicBounds(ic_menu_search, 0,
                             R.drawable.ic_input_delete, 0);
@@ -179,8 +162,6 @@ public class HomeLocationActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String description = (String) parent.getItemAtPosition(position);
-                //Adding in sharedPreferences
-
                 sTrendingSearchList.add(description);
 
                 if (sTrendingSearchList != null) {
@@ -188,27 +169,14 @@ public class HomeLocationActivity extends AppCompatActivity {
                     list.addAll(sTrendingSearchList);
                     editor.putStringSet("searchedList", list);
                     editor.commit();
-                  /*  for (String s : sTrendingSearchList) {
-                        Log.v("Trending", s);
-                    }*/
-
-                  /* list= pref.getStringSet("searchedList",null);
-                    sTrendingSearchList.addAll(list);
-                    RecentSearchAdapter adapter = new RecentSearchAdapter(getApplicationContext(), sTrendingSearchList);
-                    mRecyclerview.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                    mRecyclerview.setAdapter(adapter);*/
                 }
                 if (PREDICTIONS.get(position).getPlace_id() != null) {
-                    Log.v("Place ID", "" + PREDICTIONS.get(position).getPlace_id());
-                    Log.v("description", "" + parent.getItemAtPosition(position));
                     Call<PlaceDetails> call = service.placeDetails(PREDICTIONS.get(position).getPlace_id());
                     call.enqueue(new Callback<PlaceDetails>() {
                         @Override
                         public void onResponse(Call<PlaceDetails> call, Response<PlaceDetails> response) {
                             if (response.isSuccessful()) {
                                 if (response.body() != null) {
-                                    Log.v(TAG, "lat" + response.body().getResult().getGeometry().getLocation().getLat());
-                                    Log.v(TAG, "lng" + response.body().getResult().getGeometry().getLocation().getLng());
                                     lat = response.body().getResult().getGeometry().getLocation().getLat();
                                     lng = response.body().getResult().getGeometry().getLocation().getLng();
 
@@ -219,7 +187,6 @@ public class HomeLocationActivity extends AppCompatActivity {
                                     isLocationSelected = true;
                                     finish();
                                 }
-
                             }
                         }
 
@@ -230,7 +197,6 @@ public class HomeLocationActivity extends AppCompatActivity {
                     });
 
                 }
-//                PREDICTIONS.clear();
                 mAutoCompleteTv.setText(description);
             }
         });
@@ -243,7 +209,7 @@ public class HomeLocationActivity extends AppCompatActivity {
 
     @OnClick(R.id.edt_detect_my_location)
     public void detectCurrentLocation() {
-        com.durgesh.restaurant.utility.SnapXLog.showToast(this, getString(R.string.location_changed_to) + " " + mLocationName);
+        com.durgesh.restaurant.app.constant.RToast.showToast(this, getString(R.string.location_changed_to) + " " + mLocationName);
         finish();
     }
 
@@ -261,8 +227,7 @@ public class HomeLocationActivity extends AppCompatActivity {
             RecentSearchAdapter adapter = new RecentSearchAdapter(getApplicationContext(), sTrendingSearchList, new OnItemClickListener() {
                 @Override
                 public void onItemClick(String s) {
-//                    mAutoCompleteTv.setText(s);
-//                    finish();
+
                     Intent intent = new Intent();
                     intent.putExtra("lat", lat);
                     intent.putExtra("lng", lng);
@@ -275,15 +240,6 @@ public class HomeLocationActivity extends AppCompatActivity {
             mRecyclerview.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
             mRecyclerview.setAdapter(adapter);
             adapter.notifyDataSetChanged();
-        }
-
-        if (PREDICTIONS != null) {
-           /* if (mAutoCompleteTv.getText().length() == 0) {
-                PREDICTIONS.clear();
-            }*/
-            for (Prediction p : PREDICTIONS) {
-                Log.v(TAG, "" + p.getDescription());
-            }
         }
     }
 

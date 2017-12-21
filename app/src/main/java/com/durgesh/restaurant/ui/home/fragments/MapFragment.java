@@ -19,13 +19,13 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import com.durgesh.restaurant.R;
+import com.durgesh.restaurant.app.constant.RToast;
 import com.durgesh.restaurant.models.googlePlaces.Place;
 import com.durgesh.restaurant.models.googlePlaces.Results;
 import com.durgesh.restaurant.models.googlePlaces.RootGooglePlaces;
 import com.durgesh.restaurant.network.ApiClient;
-import com.durgesh.restaurant.network.SXAPInterface;
+import com.durgesh.restaurant.network.ApiHelper;
 import com.durgesh.restaurant.ui.BlinkingMarker;
-import com.durgesh.restaurant.ui.details.DetailsActivity;
 import com.durgesh.restaurant.ui.home.HomeContract;
 import com.durgesh.restaurant.ui.map.NearbyPlacesAdapter;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -56,14 +56,14 @@ import retrofit2.Response;
  * Created by Snehal Tembare on 5/9/17.
 
  */
-public class MapFragment extends DaggerFragment implements HomeContract.View, OnMapReadyCallback {
+public class MapFragment extends DaggerFragment implements HomeContract.MapView, OnMapReadyCallback {
 
 
     private static final double DIST_IN_MILE = 1609;
     private static final float STROKE_WIDTH = 2;
 
     @Inject
-    HomeContract.Presenter mPresenter;
+    HomeContract.MapPresenter mapPresenter;
 
     @Inject
     public MapFragment(){
@@ -120,9 +120,7 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
         } catch (InflateException e) {
             return view;
         }
-
-//        getActivity().getActionBar().hide();
-        MapView mapFragment = (MapView) view.findViewById(R.id.maps);
+        MapView mapFragment = view.findViewById(R.id.maps);
         mapFragment.onCreate(savedInstanceState);
         mapFragment.onResume();
         mapFragment.getMapAsync(this);
@@ -137,8 +135,8 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
     public void nearbyPlaces() {
 
         if (ApiClient.getGoogleClient(getActivity()) != null) {
-            SXAPInterface service;
-            service = ApiClient.getGoogleClient(getActivity()).create(SXAPInterface.class);
+            ApiHelper service;
+            service = ApiClient.getGoogleClient(getActivity()).create(ApiHelper.class);
             Call<RootGooglePlaces> call = service.getGooglePlaces(srcLat + "," + srcLng);
             call.enqueue(new Callback<RootGooglePlaces>() {
                 @Override
@@ -151,7 +149,7 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                         rootGooglePlaces = new RootGooglePlaces();
                         rootGooglePlaces = response.body();
                         resultArrayList = response.body().getResults();
-                        for (int i = 0; i < 12; i++) {
+                        for (int i = 0; i < resultArrayList.size(); i++) {
                             Double lat = Double.parseDouble(resultArrayList.get(i).getGeometry().getLocation().getLat());
                             Double lng = Double.parseDouble(resultArrayList.get(i).getGeometry().getLocation().getLng());
                             String placeName = resultArrayList.get(i).getName();
@@ -165,20 +163,6 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                             mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                             mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
 
-                        }
-                        for (int i = 13; i < 20; i++) {
-                            Double lat = Double.parseDouble(resultArrayList.get(i).getGeometry().getLocation().getLat());
-                            Double lng = Double.parseDouble(resultArrayList.get(i).getGeometry().getLocation().getLng());
-                            String placeName = resultArrayList.get(i).getName();
-
-                            MarkerOptions markerOptions = new MarkerOptions();
-                            LatLng latLng = new LatLng(lat, lng);
-                            markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_rest_marker));
-                            markerOptions.position(latLng);
-                            markerOptions.title(placeName);
-                            mMap.addMarker(markerOptions);
-                            mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                            mMap.animateCamera(CameraUpdateFactory.zoomTo(14));
                         }
                     }
 
@@ -203,7 +187,6 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                         }
                     });
 
-                    //Place API call
                     if (resultArrayList != null) {
                         if (resultArrayList.size() == 0) {
                         } else {
@@ -239,8 +222,8 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                                 @Override
                                 public void onCardClick(int position, Results results) {
                                     selectedCardPos = position;
+                                    RToast.showToast(getActivity(),"DetailsActivity");
 
-                                    startActivity(new Intent(getActivity(), DetailsActivity.class));
                                 }
                             });
 
@@ -277,7 +260,6 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                             mNearbyPlacesAdapter.notifyDataSetChanged();
                         }
                     });
-                    //scroll one item at a time
                     SnapHelper snapHelper = new PagerSnapHelper();
                     snapHelper.attachToRecyclerView(mRecyclerView);
 
@@ -288,8 +270,7 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
                 public void onFailure(Call<RootGooglePlaces> call, Throwable t) {
                     mProgressBar.setVisibility(View.GONE);
                     mFrameLayout.setAlpha((float) 1.0);
-//                    SXLog.showToast(getActivity(), "failure");
-//                    Toast.makeText(getActivity(),"Failure",Toast.LENGTH_SHORT).show();
+
                 }
             });
         }
@@ -313,11 +294,12 @@ public class MapFragment extends DaggerFragment implements HomeContract.View, On
 
     @OnClick(R.id.imgCurLoc)
     public void imgCurLoc(View view) {
-        com.durgesh.restaurant.utilities.SXLog.showToast(getActivity(), "change location");
+        RToast.showToast(getActivity(), "change location");
     }
 
     @OnClick(R.id.imgFilter)
     public void imgFilters(View view) {
-        com.durgesh.restaurant.utilities.SXLog.showToast(getActivity(), "filters");
+        RToast.showToast(getActivity(), "filters");
     }
+
 }

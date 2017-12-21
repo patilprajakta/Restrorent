@@ -30,8 +30,6 @@ import dagger.Lazy;
  */
 public class HomeActivity extends BaseActivity {
 
-    private static final String TAG = "HomeActivity";
-
     @Inject
     HomePresenter mHomePresenter;
 
@@ -50,7 +48,6 @@ public class HomeActivity extends BaseActivity {
     @Inject
     Lazy<ProfileFragment> profileFragmentProvider;
 
-
     @BindView(R.id.navigation)
     protected BottomNavigationView mBottomNavigationView;
 
@@ -64,12 +61,12 @@ public class HomeActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 Fragment selectedFragment = null;
                 switch (item.getItemId()) {
+
                     case R.id.menu_list:
                         selectedFragment = homeFragmentProvider.get();
                         break;
@@ -98,5 +95,11 @@ public class HomeActivity extends BaseActivity {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.frame_layout, fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void onDestroy() {
+        mHomePresenter.dropView();
+        super.onDestroy();
     }
 }

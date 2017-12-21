@@ -21,6 +21,7 @@ import dagger.android.ContributesAndroidInjector;
  */
 @Module
 public abstract class HomeModule {
+
     @FragmentScoped
     @ContributesAndroidInjector
     abstract CouponsFragment couponsFragment();
@@ -42,22 +43,19 @@ public abstract class HomeModule {
     @ContributesAndroidInjector
     abstract ProfileFragment profileFragment();
 
+    abstract HomeInteracter getHomeInteracter();
 
     @Provides
-    static HomeInteractor homeInteractor( ) {
-        return new HomeInteractor();
-    }
-//    @ActivityScoped
-//    @Binds
-//    abstract HomeInteractor homeInteractor(HomeInteractor interactor);
-
-
-    @Provides
-    static HomeContract.Presenter homePresente( HomeInteractor interactor) {
+    static HomeContract.Presenter provideHomePresenter(HomeInteracter interactor) {
         HomeContract.Presenter  presenter = new HomePresenter(interactor);
+        interactor.setPresenter(presenter);
         return presenter;
     }
-//    @ActivityScoped
-//    @Binds
-//    abstract HomeContract.Presenter homePresenter(HomePresenter presenter);
+
+    @Provides
+    static HomeContract.MapPresenter provideHomeMapPresenter(HomeInteracter interactor) {
+        HomeContract.MapPresenter  presenter = new HomeMapPresenter(interactor);
+        interactor.setMapPresenter(presenter);
+        return presenter;
+    }
 }

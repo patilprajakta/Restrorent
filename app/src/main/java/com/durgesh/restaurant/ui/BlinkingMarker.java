@@ -44,98 +44,28 @@ public class BlinkingMarker extends android.support.v4.app.FragmentActivity {
     private LatLng mNewPosition;
     private boolean mSyncMove;
 
-    /**
-     * <p>Constructor for a blinking marker, with default frequency and fps.</p>
-     * @param bitmap - the bitmap for the marker
-     * @param map - the GoogleMap instance to which the marker is attached
-     */
-    public BlinkingMarker(Bitmap bitmap, GoogleMap map) {
-        this(bitmap, map, DEFAULT_FPS, DEFAULT_FREQUENCY_MILLIS);
-    }
-
-    /**
-     * <p>Constructor for a blinking marker, with a custom frequency and fps.</p>
-     * @param bitmap - the bitmap for the marker
-     * @param map - the GoogleMap instance to which the marker is attached
-     * @param fps - the fps of the blinking
-     * @param frequencyInMillis - the frequency of the blinking in milliseconds
-     */
     public BlinkingMarker(Bitmap bitmap, GoogleMap map, int fps, int frequencyInMillis) {
-        int mBlinkPeriodMillis;
         mMap = map;
         mOriginalBitmap = bitmap;
         mFps = fps;
-        mBlinkPeriodMillis = frequencyInMillis;
         calculateFps(fps, frequencyInMillis);
     }
 
-    /**
-     * <p>Add the marker to the Map. Adding a blinking marker means adding
-     * several markers with different opacity to the map. At every time only
-     * one marker is visible to the user.</p>
-     * <p>Note! Have to be called from the UI thread.</p>
-     * @param position - the position of the marker
-     * @throws IllegalStateException - if it isn't called form the UI thread
-     */
     public void addToMap(LatLng position) throws IllegalStateException {
         checkIfUiThread();
         if (mMarkers != null) {
-            Log.w(TAG, "Marker was already added.");
             return;
         }
 
-        mMarkers = new ArrayList<Marker>();
+        mMarkers = new ArrayList<>();
         for (int i = 0; i < mDistinctBitmaps; i++) {
             mMarkers.add(addMarker(adjustOpacity(mOriginalBitmap, 255 / mDistinctBitmaps * i), position));
         }
     }
 
-    /**
-     * <p>Removes the marker from the map. It could free up a lot of
-     * memory, so use this when you don't need the marker anymore.</p>
-     * <p>Note! Have to be called from the UI thread.</p>
-     * @throws IllegalStateException - if it isn't called form the UI thread
-     */
-    public void removeMarker() throws IllegalStateException {
-        checkIfUiThread();
-        if (mUiHandler != null) {
-            stopBlinking();
-        }
-        removeMarkers();
-    }
-
-    /**
-     * <p>Moves the marker to a new position, in sync with the blinking.
-     * For details see {@link #moveMarker(LatLng, boolean).</p>
-     * @param newPosition - the new position
-     */
-    public void moveMarker(LatLng newPosition) {
-        mNewPosition = newPosition;
-        mSyncMove = true;
-    }
-
-    /**
-     * <p>Moves the marker to a new position. The move can be immediate or in
-     * sync with the blinking. If is synchronous then the move will wait until the marker
-     * becames invisible and then moves it to the new position.</p>
-     * @param newPosition - the new position
-     * @param sync - if true the move is in sync with the blinking; if false
-     * the move is immediate.
-     */
-    public void moveMarker(LatLng newPosition, boolean sync) {
-        mNewPosition = newPosition;
-        mSyncMove = sync;
-    }
-
-    /**
-     * <p>Starts the blinking of the marker. Don't forget to stop it
-     * if your activity goes to the background.</p>
-     * @throws IllegalStateException - if it isn't called form the UI thread
-     */
     public void startBlinking() throws IllegalStateException {
         checkIfUiThread();
         if (mUiHandler != null) {
-            Log.w(TAG, "Marker was already added.");
             return;
         }
 
@@ -145,31 +75,6 @@ public class BlinkingMarker extends android.support.v4.app.FragmentActivity {
         mDirection = -1;
 
         mUiHandler.post(mBlinkerRunnable);
-    }
-
-    /**
-     * <p>Stops the blinking of the marker. You sould call this method
-     * at least on the onPause() of the Activity.</p>
-     * @throws IllegalStateException - if it isn't called form the UI thread
-     */
-    public void stopBlinking() throws IllegalStateException {
-        checkIfUiThread();
-        if (mUiHandler == null) {
-            return;
-        }
-        mUiHandler.removeCallbacks(mBlinkerRunnable);
-        mUiHandler = null;
-    }
-
-    private void removeMarkers() {
-        if (mMarkers == null) {
-            return;
-        }
-
-        for (Marker marker : mMarkers) {
-            marker.remove();
-        }
-        mMarkers = null;
     }
 
     private void calculateFps(int fps, int blinkPeriodMillis) {

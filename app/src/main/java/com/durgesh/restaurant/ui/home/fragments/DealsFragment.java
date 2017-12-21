@@ -17,8 +17,7 @@ import dagger.android.DaggerFragment;
  * Created by Snehal Tembare on 5/9/17.
 
  */
-public class DealsFragment extends DaggerFragment implements HomeContract.View {
-
+public class DealsFragment extends DaggerFragment {
 
     @Inject
     HomeContract.Presenter mPresenter;
@@ -28,7 +27,6 @@ public class DealsFragment extends DaggerFragment implements HomeContract.View {
 
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +35,6 @@ public class DealsFragment extends DaggerFragment implements HomeContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_deals, container, false);
     }
 

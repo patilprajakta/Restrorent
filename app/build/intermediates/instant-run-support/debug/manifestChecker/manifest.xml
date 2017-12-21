@@ -57,7 +57,7 @@
             android:value="@integer/google_play_services_version" />
         <!--
          <meta-data
-         android:name="com.google.android.geo.API_KEY"
+         android:name="com.google.android.GOOGLE_API_KEY_KEY"
          android:value="@string/google_maps_key" />
         -->
         <activity android:name="com.durgesh.restaurant.ui.home.HomeActivity" >

@@ -55,7 +55,6 @@
                         android:layout_width="@dimen/common_dimens_20"
                         android:layout_height="@dimen/common_dimens_20"
                         android:src="@drawable/ic_discount_16" />
-                    android:color="#FF999696" />
 
                     <ImageView
                         android:layout_width="@dimen/common_dimens_20"

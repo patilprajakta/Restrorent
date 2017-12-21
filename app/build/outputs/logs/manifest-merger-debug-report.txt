@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
-INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
-INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
-INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
+INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
+INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
+INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
 MERGED from [com.google.dagger:dagger-android-support:2.13] /home/synerzip/.gradle/caches/transforms-1/files-1.1/dagger-android-support-2.13.aar/f84fd2817a7a28e1dd58460f7e4bc8bf/AndroidManifest.xml:16:1-19:12
 MERGED from [com.android.support:design:25.3.1] /home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:25.4.0] /home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/AndroidManifest.xml:17:1-31:12
@@ -46,22 +46,22 @@ MERGED from [com.google.firebase:firebase-analytics-license:11.6.2] /home/synerz
 MERGED from [com.google.firebase:firebase-common-license:11.6.2] /home/synerzip/.gradle/caches/transforms-1/files-1.1/firebase-common-license-11.6.2.aar/58b898b2298980a95e0194dfc75ab157/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.6.2] /home/synerzip/.gradle/caches/transforms-1/files-1.1/firebase-analytics-impl-license-11.6.2.aar/35b1e3f0c0b21fccc72a17e785119214/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.6.2] /home/synerzip/.gradle/caches/transforms-1/files-1.1/firebase-iid-license-11.6.2.aar/9a82432e5a2f54c69178d0f6f4ec9e8c/AndroidManifest.xml:2:1-6:12
-INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
-INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
-INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
+INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
+INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
+INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
 	package
 		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:3:6-38
 		INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml
 		INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
 		INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:2:6-53
 	android:versionCode
 		INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-87:12
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:1-84:12
 		INJECTED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:1:11-69
@@ -206,7 +206,7 @@ ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidMan
 	android:name
 		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:18:19-67
 application
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:20:5-86:19
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:20:5-83:19
 MERGED from [com.android.support:design:25.3.1] /home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:design:25.3.1] /home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.4.0] /home/synerzip/.gradle/caches/transforms-1/files-1.1/appcompat-v7-25.4.0.aar/c09fe864606137c4949a7a044a00d619/AndroidManifest.xml:25:5-29:19
@@ -341,64 +341,58 @@ activity#com.durgesh.restaurant.ui.direction.DirectionsActivity
 ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:58:5-86
 	android:name
 		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:58:15-84
-activity#com.durgesh.restaurant.ui.map.MapsActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:59:5-61:55
-	android:label
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:61:9-52
-	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:60:9-66
 activity#com.durgesh.restaurant.ui.details.DetailsActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:62:5-82
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:59:9-86
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:62:15-79
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:59:19-83
 activity#com.durgesh.restaurant.ui.splash.SplashActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:63:5-80
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:60:5-80
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:63:15-77
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:60:15-77
 activity#com.durgesh.restaurant.ui.camera.CameraActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:64:5-80
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:61:5-80
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:64:15-77
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:61:15-77
 activity#com.durgesh.restaurant.ui.currentLocation.CurrentLocationActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:65:5-98
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:62:5-98
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:65:15-95
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:62:15-95
 activity#com.durgesh.restaurant.ui.homeLocation.HomeLocationActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:66:5-92
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:63:5-92
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:66:15-89
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:63:15-89
 activity#com.facebook.FacebookActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:68:9-72:15
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:65:9-69:15
 	android:label
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:71:13-45
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:68:13-45
 	android:configChanges
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:70:13-96
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:67:13-96
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:69:13-57
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:66:13-57
 activity#com.facebook.CustomTabActivity
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:74:9-85:20
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:71:9-82:20
 	android:exported
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:76:13-36
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:73:13-36
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:75:13-58
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:72:13-58
 intent-filter#android.intent.action.VIEW+android.intent.category.BROWSABLE+android.intent.category.DEFAULT
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:77:13-84:29
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:74:13-81:29
 action#android.intent.action.VIEW
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:78:17-69
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:75:17-69
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:78:25-66
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:75:25-66
 category#android.intent.category.DEFAULT
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:80:17-76
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:77:17-76
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:80:27-73
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:77:27-73
 category#android.intent.category.BROWSABLE
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:81:17-78
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:78:17-78
 	android:name
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:81:27-75
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:78:27-75
 data
-ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:83:17-75
+ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:80:17-75
 	android:scheme
-		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:83:23-72
+		ADDED from /home/synerzip/Desktop/AndroidProj/Restrorent/app/src/main/AndroidManifest.xml:80:23-72
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:25.3.1] /home/synerzip/.gradle/caches/transforms-1/files-1.1/design-25.3.1.aar/81fbfb95ec51d16ec5fdd0a03ecdac4b/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:cardview-v7:25.3.1] /home/synerzip/.gradle/caches/transforms-1/files-1.1/cardview-v7-25.3.1.aar/8e313601a5f16b4926786b49fc0fa6c3/AndroidManifest.xml:22:5-24:34

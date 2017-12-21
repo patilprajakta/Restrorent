@@ -15,29 +15,30 @@ import javax.inject.Provider;
 public final class MapFragment_MembersInjector implements MembersInjector<MapFragment> {
   private final Provider<DispatchingAndroidInjector<Fragment>> childFragmentInjectorProvider;
 
-  private final Provider<HomeContract.Presenter> mPresenterProvider;
+  private final Provider<HomeContract.MapPresenter> mapPresenterProvider;
 
   public MapFragment_MembersInjector(
       Provider<DispatchingAndroidInjector<Fragment>> childFragmentInjectorProvider,
-      Provider<HomeContract.Presenter> mPresenterProvider) {
+      Provider<HomeContract.MapPresenter> mapPresenterProvider) {
     this.childFragmentInjectorProvider = childFragmentInjectorProvider;
-    this.mPresenterProvider = mPresenterProvider;
+    this.mapPresenterProvider = mapPresenterProvider;
   }
 
   public static MembersInjector<MapFragment> create(
       Provider<DispatchingAndroidInjector<Fragment>> childFragmentInjectorProvider,
-      Provider<HomeContract.Presenter> mPresenterProvider) {
-    return new MapFragment_MembersInjector(childFragmentInjectorProvider, mPresenterProvider);
+      Provider<HomeContract.MapPresenter> mapPresenterProvider) {
+    return new MapFragment_MembersInjector(childFragmentInjectorProvider, mapPresenterProvider);
   }
 
   @Override
   public void injectMembers(MapFragment instance) {
     DaggerFragment_MembersInjector.injectChildFragmentInjector(
         instance, childFragmentInjectorProvider.get());
-    injectMPresenter(instance, mPresenterProvider.get());
+    injectMapPresenter(instance, mapPresenterProvider.get());
   }
 
-  public static void injectMPresenter(MapFragment instance, HomeContract.Presenter mPresenter) {
-    instance.mPresenter = mPresenter;
+  public static void injectMapPresenter(
+      MapFragment instance, HomeContract.MapPresenter mapPresenter) {
+    instance.mapPresenter = mapPresenter;
   }
 }

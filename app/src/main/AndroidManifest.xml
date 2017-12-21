@@ -39,7 +39,7 @@
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
     <!-- <meta-data
-         android:name="com.google.android.geo.API_KEY"
+         android:name="com.google.android.GOOGLE_API_KEY_KEY"
          android:value="@string/google_maps_key" />-->
         <activity android:name="com.durgesh.restaurant.ui.home.HomeActivity">
             <intent-filter>
@@ -56,14 +56,9 @@
 
 
     <activity android:name="com.durgesh.restaurant.ui.direction.DirectionsActivity"/>
-    <activity
-        android:name="com.durgesh.restaurant.ui.map.MapsActivity"
-        android:label="@string/title_activity_maps" />
-    <activity android:name="com.durgesh.restaurant.ui.details.DetailsActivity" />
-    <activity android:name="com.durgesh.restaurant.ui.splash.SplashActivity" />
+        <activity android:name="com.durgesh.restaurant.ui.splash.SplashActivity" />
     <activity android:name="com.durgesh.restaurant.ui.camera.CameraActivity" />
-    <activity android:name="com.durgesh.restaurant.ui.currentLocation.CurrentLocationActivity" />
-    <activity android:name="com.durgesh.restaurant.ui.homeLocation.HomeLocationActivity" />
+        <activity android:name="com.durgesh.restaurant.ui.homeLocation.HomeLocationActivity" />
 
         <activity
             android:name="com.facebook.FacebookActivity"

@@ -1,7 +1,7 @@
 package com.durgesh.restaurant.dagger;
 
 import com.durgesh.restaurant.app.constant.Constants;
-import com.durgesh.restaurant.network.NetworkApi;
+import com.durgesh.restaurant.network.NetworkHelper;
 
 import javax.inject.Named;
 import javax.inject.Singleton;
@@ -43,7 +43,7 @@ public class NetworkModule {
 
     @Provides
     @Singleton
-    NetworkApi provideNetworkApi(Retrofit retrofit) {
-        return retrofit.create(NetworkApi.class);
+    NetworkHelper provideNetworkApi(Retrofit retrofit) {
+        return retrofit.create(NetworkHelper.class);
     }
 }

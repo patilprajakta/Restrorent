@@ -12,13 +12,15 @@ import com.durgesh.restaurant.ui.RestaurentApplication;
 import com.durgesh.restaurant.ui.home.HomeActivity;
 import com.durgesh.restaurant.ui.home.HomeActivity_MembersInjector;
 import com.durgesh.restaurant.ui.home.HomeContract;
+import com.durgesh.restaurant.ui.home.HomeInteracter;
+import com.durgesh.restaurant.ui.home.HomeInteracter_Factory;
 import com.durgesh.restaurant.ui.home.HomeModule_CouponsFragment;
 import com.durgesh.restaurant.ui.home.HomeModule_DealsFragment;
-import com.durgesh.restaurant.ui.home.HomeModule_HomeInteractorFactory;
 import com.durgesh.restaurant.ui.home.HomeModule_HomeListFragment;
-import com.durgesh.restaurant.ui.home.HomeModule_HomePresenteFactory;
 import com.durgesh.restaurant.ui.home.HomeModule_MapFragment;
 import com.durgesh.restaurant.ui.home.HomeModule_ProfileFragment;
+import com.durgesh.restaurant.ui.home.HomeModule_ProvideHomeMapPresenterFactory;
+import com.durgesh.restaurant.ui.home.HomeModule_ProvideHomePresenterFactory;
 import com.durgesh.restaurant.ui.home.HomePresenter_Factory;
 import com.durgesh.restaurant.ui.home.fragments.CouponsFragment;
 import com.durgesh.restaurant.ui.home.fragments.CouponsFragment_Factory;
@@ -226,9 +228,11 @@ public final class DaggerAppComponent implements AppComponent {
 
     private Provider<DispatchingAndroidInjector<Fragment>> dispatchingAndroidInjectorProvider2;
 
-    private Provider<HomeContract.Presenter> homePresenteProvider;
+    private Provider<HomeContract.Presenter> provideHomePresenterProvider;
 
     private Provider<HomeListFragment> homeListFragmentProvider;
+
+    private Provider<HomeContract.MapPresenter> provideHomeMapPresenterProvider;
 
     private Provider<MapFragment> mapFragmentProvider;
 
@@ -271,10 +275,14 @@ public final class DaggerAppComponent implements AppComponent {
 
     private HomeContract.Presenter getPresenter() {
       return Preconditions.checkNotNull(
-          HomeModule_HomePresenteFactory.proxyHomePresente(
-              Preconditions.checkNotNull(
-                  HomeModule_HomeInteractorFactory.proxyHomeInteractor(),
-                  "Cannot return null from a non-@Nullable @Provides method")),
+          HomeModule_ProvideHomePresenterFactory.proxyProvideHomePresenter(new HomeInteracter()),
+          "Cannot return null from a non-@Nullable @Provides method");
+    }
+
+    private HomeContract.MapPresenter getMapPresenter() {
+      return Preconditions.checkNotNull(
+          HomeModule_ProvideHomeMapPresenterFactory.proxyProvideHomeMapPresenter(
+              new HomeInteracter()),
           "Cannot return null from a non-@Nullable @Provides method");
     }
 
@@ -316,8 +324,7 @@ public final class DaggerAppComponent implements AppComponent {
             }
           };
       this.homePresenterProvider =
-          DoubleCheck.provider(
-              HomePresenter_Factory.create(HomeModule_HomeInteractorFactory.create()));
+          DoubleCheck.provider(HomePresenter_Factory.create(HomeInteracter_Factory.create()));
       this.mapOfClassOfAndProviderOfFactoryOfProvider =
           MapProviderFactory
               .<Class<? extends Fragment>, AndroidInjector.Factory<? extends Fragment>>builder(5)
@@ -329,19 +336,24 @@ public final class DaggerAppComponent implements AppComponent {
               .build();
       this.dispatchingAndroidInjectorProvider2 =
           DispatchingAndroidInjector_Factory.create(mapOfClassOfAndProviderOfFactoryOfProvider);
-      this.homePresenteProvider =
-          HomeModule_HomePresenteFactory.create(HomeModule_HomeInteractorFactory.create());
+      this.provideHomePresenterProvider =
+          HomeModule_ProvideHomePresenterFactory.create(HomeInteracter_Factory.create());
       this.homeListFragmentProvider =
           HomeListFragment_Factory.create(
-              dispatchingAndroidInjectorProvider2, homePresenteProvider);
+              dispatchingAndroidInjectorProvider2, provideHomePresenterProvider);
+      this.provideHomeMapPresenterProvider =
+          HomeModule_ProvideHomeMapPresenterFactory.create(HomeInteracter_Factory.create());
       this.mapFragmentProvider =
-          MapFragment_Factory.create(dispatchingAndroidInjectorProvider2, homePresenteProvider);
+          MapFragment_Factory.create(
+              dispatchingAndroidInjectorProvider2, provideHomeMapPresenterProvider);
       this.dealsFragmentProvider =
-          DealsFragment_Factory.create(dispatchingAndroidInjectorProvider2, homePresenteProvider);
+          DealsFragment_Factory.create(
+              dispatchingAndroidInjectorProvider2, provideHomePresenterProvider);
       this.couponsFragmentProvider =
           CouponsFragment_Factory.create(dispatchingAndroidInjectorProvider2);
       this.profileFragmentProvider =
-          ProfileFragment_Factory.create(dispatchingAndroidInjectorProvider2, homePresenteProvider);
+          ProfileFragment_Factory.create(
+              dispatchingAndroidInjectorProvider2, provideHomePresenterProvider);
     }
 
     @Override
@@ -508,8 +520,8 @@ public final class DaggerAppComponent implements AppComponent {
       private MapFragment injectMapFragment(MapFragment instance) {
         DaggerFragment_MembersInjector.injectChildFragmentInjector(
             instance, HomeActivitySubcomponentImpl.this.getDispatchingAndroidInjectorOfFragment2());
-        MapFragment_MembersInjector.injectMPresenter(
-            instance, HomeActivitySubcomponentImpl.this.getPresenter());
+        MapFragment_MembersInjector.injectMapPresenter(
+            instance, HomeActivitySubcomponentImpl.this.getMapPresenter());
         return instance;
       }
     }

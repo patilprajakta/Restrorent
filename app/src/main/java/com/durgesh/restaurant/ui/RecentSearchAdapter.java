@@ -53,7 +53,7 @@ public class RecentSearchAdapter extends RecyclerView.Adapter<RecentSearchAdapte
 
         public ViewHolder(View itemView) {
             super(itemView);
-            mRecentPlace = (TextView) itemView.findViewById(R.id.txt_trending_place_name);
+            mRecentPlace = itemView.findViewById(R.id.txt_trending_place_name);
         }
 
         public void bind(final String trendingPlace,final HomeLocationActivity.OnItemClickListener onItemClickListener) {

@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import com.durgesh.restaurant.R;
-import com.durgesh.restaurant.ui.main.MainActivity;
+import com.durgesh.restaurant.ui.home.HomeActivity;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -42,20 +42,14 @@ import butterknife.ButterKnife;
 
 public class FacebookLoginActivity extends AppCompatActivity {
 
-    private static final String TAG = "facebookLogin";
-
     @BindView(R.id.btnFbLogin)
     protected LoginButton mLoginButton;
-
-   /* @BindView(R.id.btnFbLogin)
-    protected Button mBtnFbLogin;*/
 
     @BindView(R.id.progress_bar)
     protected ProgressBar mProgressBar;
 
     private CallbackManager mCallbackManager;
     private FirebaseAuth mFirebaseAuth;
-    private FirebaseAuth.AuthStateListener mFirebaseAuthListener;
     private FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +57,6 @@ public class FacebookLoginActivity extends AppCompatActivity {
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_log_in);
         ButterKnife.bind(this);
-
-//        getSupportActionBar().hide();
-
         mCallbackManager = CallbackManager.Factory.create();
         mFirebaseAuth = FirebaseAuth.getInstance();
 
@@ -95,36 +86,16 @@ public class FacebookLoginActivity extends AppCompatActivity {
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
-                Log.v("MY KEY HASH:", Base64.encodeToString(md.digest(), Base64.DEFAULT));
             }
         } catch (PackageManager.NameNotFoundException e) {
 
         } catch (NoSuchAlgorithmException e) {
 
         }
-
-       /* mFirebaseAuthListener = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if (user != null) {
-                    goMainScreen();
-                }
-            }
-        };*/
     }
-
-   /* @OnClick(R.id.btnFbLogin)
-    public void btnLogin(View view) {
-        if (view == mBtnFbLogin) {
-            mProgressBar.setVisibility(View.VISIBLE);
-            mLoginButton.performClick();
-        }
-    }*/
-
 
     private void handleFacebookAccessToken(AccessToken accessToken) {
         AuthCredential credential = FacebookAuthProvider.getCredential(accessToken.getToken());
-        Log.v(TAG, accessToken.getToken());
 
         mFirebaseAuth.signInWithCredential(credential).addOnCompleteListener(this,
                 new OnCompleteListener<AuthResult>() {
@@ -145,7 +116,7 @@ public class FacebookLoginActivity extends AppCompatActivity {
     }
 
     private void goMainScreen() {
-        Intent intent = new Intent(FacebookLoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(FacebookLoginActivity.this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK
                 | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
@@ -155,17 +126,5 @@ public class FacebookLoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         mCallbackManager.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-//        mFirebaseAuth.addAuthStateListener(mFirebaseAuthListener);
-           }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-//        mFirebaseAuth.removeAuthStateListener(mFirebaseAuthListener);
     }
 }

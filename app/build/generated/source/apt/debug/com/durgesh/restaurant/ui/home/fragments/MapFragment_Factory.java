@@ -15,13 +15,13 @@ import javax.inject.Provider;
 public final class MapFragment_Factory implements Factory<MapFragment> {
   private final Provider<DispatchingAndroidInjector<Fragment>> childFragmentInjectorProvider;
 
-  private final Provider<HomeContract.Presenter> mPresenterProvider;
+  private final Provider<HomeContract.MapPresenter> mapPresenterProvider;
 
   public MapFragment_Factory(
       Provider<DispatchingAndroidInjector<Fragment>> childFragmentInjectorProvider,
-      Provider<HomeContract.Presenter> mPresenterProvider) {
+      Provider<HomeContract.MapPresenter> mapPresenterProvider) {
     this.childFragmentInjectorProvider = childFragmentInjectorProvider;
-    this.mPresenterProvider = mPresenterProvider;
+    this.mapPresenterProvider = mapPresenterProvider;
   }
 
   @Override
@@ -29,14 +29,14 @@ public final class MapFragment_Factory implements Factory<MapFragment> {
     MapFragment instance = new MapFragment();
     DaggerFragment_MembersInjector.injectChildFragmentInjector(
         instance, childFragmentInjectorProvider.get());
-    MapFragment_MembersInjector.injectMPresenter(instance, mPresenterProvider.get());
+    MapFragment_MembersInjector.injectMapPresenter(instance, mapPresenterProvider.get());
     return instance;
   }
 
   public static Factory<MapFragment> create(
       Provider<DispatchingAndroidInjector<Fragment>> childFragmentInjectorProvider,
-      Provider<HomeContract.Presenter> mPresenterProvider) {
-    return new MapFragment_Factory(childFragmentInjectorProvider, mPresenterProvider);
+      Provider<HomeContract.MapPresenter> mapPresenterProvider) {
+    return new MapFragment_Factory(childFragmentInjectorProvider, mapPresenterProvider);
   }
 
   public static MapFragment newMapFragment() {
